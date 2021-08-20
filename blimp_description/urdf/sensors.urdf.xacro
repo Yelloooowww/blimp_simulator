@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="namespace" value="$(arg namespace)" />
+
+    <xacro:include filename="$(find blimp_description)/urdf/3d_lidar.urdf.xacro" />
+    <xacro:velodyne_lidar name="${namespace}/front_laser" topic="${namespace}/points" parent="${namespace}/gondola_body_link" max_range="75" update_rate="15">
+        <origin xyz="0.05 0.0 -0.1" rpy="0 0 0"/>
+    </xacro:velodyne_lidar>
+
+</robot>

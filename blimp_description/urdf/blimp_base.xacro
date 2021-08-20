@@ -21,5 +21,8 @@
 	<!--*****************  physics and extra plugins description  *****************-->
 	<xacro:include filename="$(find blimp_description)/urdf/description_plugin.xacro"/>
 
-	
+	<!--**lidar**-->
+	<xacro:include filename="$(find blimp_description)/urdf/sensors.urdf.xacro" />
+
+
 </robot>
